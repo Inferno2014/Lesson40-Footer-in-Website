@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Calculate your Marks</title>
+        <style>
+            body {
+                background-color: lightsalmon;
+                color: goldenrod;
+            }
+            h2 {
+                color: blue;
+            }
+        </style>
+    </head>
+    <body>
+        <h1>Calculate your Marks!</h1>
+        <input type="number" id="enter" placeholder="Enter your Math Marks here">
+        <br>
+        <input type="number" id="enter2" placeholder="Enter your English Marks here">
+        <br>
+        <input type="number" id="enter3" placeholder="Enter your Science Marks here">
+        <br>
+        <button onClick="calculateMath()">Calculate for Math</button>
+        <br>
+        <button onClick="calculateEnglish()">Calculate for English</button>
+        <br>
+        <button onClick="calculateScience()">Calculate for Science</button>
+        <br>
+        <button onclick="getSum()">Calculate for all 3 Subjects</button>
+        <br>
+        <h2 id="result"></h2>
+        <h2 id="result2"></h2>
+        <h2 id="result3"></h2>
+        <h2 id="result4"></h2>
+        <script>
+            function calculateMath() {
+            let percentage = document.getElementById("enter").value;
+            let grade;
+                if (percentage >= 90) {
+                    grade = "A+";
+                }
+                else if (percentage >= 80) {
+                    grade = "A";
+                }
+                else if (percentage >= 60) {
+                    grade = "B";
+                }
+                else if (percentage >= 40) {
+                    grade = "C";
+                }
+                else {
+                    grade = "F";
+                }
+                document.getElementById("result").innerHTML = grade + " for Math";
+                let math = document.getElementById("enter").value;
+            }
+            function calculateEnglish() {
+                    let percentage = document.getElementById("enter2").value;
+                    let grade;
+                    if (percentage >= 90) {
+                        grade = "A+";
+                    }
+                    else if (percentage >= 80) {
+                        grade = "A";
+                    }
+                    else if (percentage >= 60) {
+                        grade = "B";
+                    }
+                    else if (percentage >= 40) {
+                        grade = "C";
+                    }
+                    else {
+                        grade = "F";
+                    }
+                    document.getElementById("result2").innerHTML = grade + " for English";
+                    let english = document.getElementById("enter2").value;
+                }
+                function calculateScience() {
+                        let percentage = document.getElementById("enter3").value;
+                        let grade;
+                        if (percentage >= 90) {
+                            grade = "A+";
+                        }
+                        else if (percentage >= 80) {
+                            grade = "A";
+                        }
+                        else if (percentage >= 60) {
+                            grade = "B";
+                        }
+                        else if (percentage >= 40) {
+                            grade = "C";
+                        }
+                        else {
+                            grade = "F";
+                        }
+                        document.getElementById("result3").innerHTML = grade + " for Science";
+                        let science = document.getElementById("enter3").value;
+                    }
+                    function getSum() {
+                        let total = math + english + science;
+                        let percent = total / 3;
+                        let grade;
+                         if (percentage >= 90) {
+                            grade = "A+";
+                        }
+                        else if (percentage >= 80) {
+                            grade = "A";
+                        }
+                        else if (percentage >= 60) {
+                            grade = "B";
+                        }
+                        else if (percentage >= 40) {
+                            grade = "C";
+                        }
+                        else {
+                            grade = "F";
+                        }
+                        document.getElementById("result4").innerHTML = grade + " for all 3 Subjects";
+                    }
+        </script>
+    </body>
+</html>
